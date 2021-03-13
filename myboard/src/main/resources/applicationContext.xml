@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+
+	<context:component-scan base-package="beepere.spring.polymorphism"></context:component-scan>
+	<bean id="apple" class="beepere.spring.polymorphism.AppleSpeaker"></bean>
+
+	<!-- 	
+	<bean id="CollectionBean" class="beepere.spring.collection.CollectionBean">
+		<property name="addressList">
+			<map>
+				<entry>
+					<key><value>홍길동</value></key>
+					<value>율도국</value>
+				</entry>
+				<entry>
+					<key><value>손오공</value></key>
+					<value>화과산</value>
+				</entry>
+			</map>
+		</property>
+	</bean>
+
+	<bean id="CollectionBean" class="beepere.spring.collection.CollectionBean">
+		<property name="addressList">
+			<list>
+				<value>서울시 서초구 서초동</value>
+				<value>서울시 동대문구 장안동</value>
+			</list>
+		</property>
+	</bean>
+	 -->
+	
+	<!--
+	<bean id="tv" class="beepere.spring.polymorphism.SamsungTV">
+		<constructor-arg index="0" ref="apple"></constructor-arg>
+		<constructor-arg index="1" value="3000000"></constructor-arg>
+		<property name="speaker" ref="apple"/>
+		<property name="price" value="3000000"/>
+	</bean>
+	
+	<bean id="sony" class="beepere.spring.polymorphism.SonySpeaker"/>
+	<bean id="apple" class="beepere.spring.polymorphism.AppleSpeaker"/>
+	
+	  -->
+</beans>
